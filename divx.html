@@ -3,12 +3,12 @@
 	<title>Растениеводство</title>
 <style>
 div#point {
-	width: 20px;
-	height: 20px;
-	position: absolute;
+	width:20px;
+	height:20px;
+	position:absolute;
 	top:150;
 	left:250;
-	background: green;
+	background:green;
 }
 </style>
 <script>
@@ -41,9 +41,13 @@ function divclick(){
 </head>
 <body>
 
-<div id="point" onclick="divclick();" style="left:250"></div>
+<div id="point" onclick="divclick();" style="left:250;top:150;"></div>
 </body>
 <script>
+
+document.addEventListener('dblclick', function (e) {
+  console.log('dbclick');
+});
 
 document.addEventListener('keyup', function(event){
     console.log('Key: ', event.key);
@@ -58,9 +62,11 @@ document.addEventListener('keyup', function(event){
     }
     if(event.key == 'ArrowDown'){
         console.log('down');
+	mydown();
     }
     if(event.key == 'ArrowUp'){
         console.log('up');
+	mytop();
     }
 });
 
@@ -79,5 +85,17 @@ function myright(){
 	//alert(x);
 	point.style.left=x;
 }	
+
+function mytop(){
+	console.log(Number(point.style.top));
+	var y = (parseInt(point.style.top,10) - Number(10)) + 'px';
+	point.style.top=y;
+}
+
+function mydown(){
+	console.log(Number(point.style.top));
+	var y = (parseInt(point.style.top,10) + Number(10)) + 'px';
+	point.style.top=y;
+}
 </script>
 </html>
