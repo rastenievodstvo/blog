@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>Растениеводство</title>
+<style>
+div#point {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top:150;
+	left:250;
+	background: green;
+}
+</style>
+<script>
+var isClicked = false;
+
+document.addEventListener('keydown', function(){
+    console.log('Success onkeydown');
+});
+document.addEventListener('keypress', function(){
+    console.log('Success onkeypress');
+});
+document.addEventListener('keyup', function(){
+    console.log('Success onkeyup');
+});
+
+
+
+function divclick(){
+	console.log('divclick');
+	
+	if(isClicked){
+		isClicked = false;
+		point.style.border = 'none';
+	}else{
+		isClicked = true;
+		point.style.border = '10px solid black';
+	}
+}
+</script>
+</head>
+<body>
+
+<div id="point" onclick="divclick();">
+
+</div>
+</body>
+<script>
+point.style.left=Number(250);
+point.style.top=Number(150);
+
+document.addEventListener('keyup', function(event){
+    console.log('Key: ', event.key);
+    console.log('keyCode: ', event.keyCode);
+    if(event.key == 'ArrowLeft'){
+        console.log('left');
+	console.log(Number(point.style.left));
+	var x = Number(point.style.left) + Number(30);
+	//x = Number(30)+x;
+	alert(x);
+	point.style.left=x;
+    }
+    if(event.key == 'ArrowRight'){
+        console.log('right');
+    }
+    if(event.key == 'ArrowDown'){
+        console.log('down');
+    }
+    if(event.key == 'ArrowUp'){
+        console.log('up');
+    }
+});
+</script>
+</html>
