@@ -34,34 +34,27 @@ function divclick(){
 		point.style.border = 'none';
 	}else{
 		isClicked = true;
-		point.style.border = '10px solid black';
+		point.style.border = '2px solid black';
 	}
 }
 </script>
 </head>
 <body>
 
-<div id="point" onclick="divclick();">
-
-</div>
+<div id="point" onclick="divclick();" style="left:250"></div>
 </body>
 <script>
-point.style.left=Number(250);
-point.style.top=Number(150);
 
 document.addEventListener('keyup', function(event){
     console.log('Key: ', event.key);
     console.log('keyCode: ', event.keyCode);
     if(event.key == 'ArrowLeft'){
         console.log('left');
-	console.log(Number(point.style.left));
-	var x = Number(point.style.left) + Number(30);
-	//x = Number(30)+x;
-	alert(x);
-	point.style.left=x;
+	myleft();
     }
     if(event.key == 'ArrowRight'){
         console.log('right');
+	myright();
     }
     if(event.key == 'ArrowDown'){
         console.log('down');
@@ -70,5 +63,21 @@ document.addEventListener('keyup', function(event){
         console.log('up');
     }
 });
+
+function myleft(){
+	console.log(Number(point.style.left));
+	//square.style.left = (parseInt(square.style.left,10)+50)+'px';
+	var x = (parseInt(point.style.left,10) - Number(10)) + 'px';
+	//alert(x);
+	point.style.left=x;
+}
+
+function myright(){
+	console.log(Number(point.style.left));
+	//square.style.left = (parseInt(square.style.left,10)+50)+'px';
+	var x = (parseInt(point.style.left,10) + Number(10)) + 'px';
+	//alert(x);
+	point.style.left=x;
+}	
 </script>
 </html>
