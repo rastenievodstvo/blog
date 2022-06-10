@@ -38,7 +38,7 @@ let isMoving = false;
 let x = 0;
 let y = 0;
 
-
+/*
 
 document.addEventListener('mousedown', e => {
 	console.log('mousedown');
@@ -63,13 +63,15 @@ document.addEventListener('mouseup', e => {
     x = 0;
     y = 0;
 });
+	
+	*/
 
 function divclick(){
 	console.log('divclick');
-	setBorder();
+	border();
 };
 
-function setBorder(){
+function border(){
 	if(isClicked){
 		unsetBorder();
 		/* isClicked = false;
@@ -80,6 +82,17 @@ function setBorder(){
 		point.style.top=myy; */
 
 	}else{
+		setBorder();
+		/*isClicked = true;
+		point.style.border = '2px solid black';
+		var myx = (parseInt(point.style.left,10) - Number(2)) + 'px';
+		var myy = (parseInt(point.style.top,10) - Number(2)) + 'px';
+		point.style.left=myx;
+		point.style.top=myy;*/
+	}
+};
+	
+	function setBorder(){
 		isClicked = true;
 		point.style.border = '2px solid black';
 		var myx = (parseInt(point.style.left,10) - Number(2)) + 'px';
@@ -87,7 +100,6 @@ function setBorder(){
 		point.style.left=myx;
 		point.style.top=myy;
 	}
-};
 	
 function unsetBorder(){
 		isClicked = false;
@@ -99,7 +111,7 @@ function unsetBorder(){
 };
 </script>
 </head>
-<body onclick="unsetBorder();">
+<body>
 	<div id="blog">
 		<div id="point" onclick="divclick();" style="left:250;top:150;background-image:url(https://sun9-79.userapi.com/s/v1/if2/vZJdr16oNUhlSDCoeKI1iqOK8G143V1Du7BBqli1qzboYrGuHTMFa8cPG8P8Ki2UJD0eJlDhxNFXzfzk9DdeMnea.jpg?size=200x267&quality=96&type=album); width:200px; height:267px"></div>
 	</div>
