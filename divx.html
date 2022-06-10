@@ -116,7 +116,7 @@ document.addEventListener('dblclick', function (e) {
 		document.location.href='https://vk.com/flower_rostov';
 	}
 });
-
+/*
 document.addEventListener('keydown', function(){
     console.log('Success onkeydown');
 	
@@ -147,25 +147,34 @@ document.addEventListener('keypress', function(event){
 document.addEventListener('keyup', function(){
     console.log('Success onkeyup');
 });
+*/
 
 document.addEventListener('keyup', function(event){
     console.log('Key: ', event.key);
     console.log('keyCode: ', event.keyCode);
     if(event.key == 'ArrowLeft'){
         console.log('left');
-	myleft();
+	    if(isClicked()){
+		myleft();
+	    }
     }
     if(event.key == 'ArrowRight'){
         console.log('right');
-	myright();
+	    if(isClicked()){
+		myright();
+	    }
     }
     if(event.key == 'ArrowDown'){
         console.log('down');
-	mydown();
+	    if(isClicked()){
+		mydown();
+	    }
     }
     if(event.key == 'ArrowUp'){
         console.log('up');
-	mytop();
+	    if(isClicked()){
+		mytop();
+	    }
     }
 });
 
