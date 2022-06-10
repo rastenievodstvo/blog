@@ -28,7 +28,6 @@ div#point {
 	top:150;
 	left:250;
 	background:green;
-	background-image:url('https://sun9-79.userapi.com/s/v1/if2/SpDEtoRrDZYir6Pe17jaUJUBmexwddz4b4XAzitSfQr7QxPyuAPMHAlyQYYhbGu4iKMuzKJvegObV_osS85HqHLN.jpg?size=810x1080&quality=96&type=album');
 	background-image:url(https://sun9-79.userapi.com/s/v1/if2/vZJdr16oNUhlSDCoeKI1iqOK8G143V1Du7BBqli1qzboYrGuHTMFa8cPG8P8Ki2UJD0eJlDhxNFXzfzk9DdeMnea.jpg?size=200x267&quality=96&type=album);
 }
 </style>
@@ -38,33 +37,38 @@ let isMoving = false;
 let x = 0;
 let y = 0;
 
-/*
 
 document.addEventListener('mousedown', e => {
 	console.log('mousedown');
-isMoving = true;
-  x = e.offsetX;
-  y = e.offsetY;
+	if(isClicked){
+		isMoving = true;
+  		x = e.offsetX;
+  		y = e.offsetY;
+	}
 });
 
 document.addEventListener('mousemove', e => {
 	console.log('mousemove');
-if(isMoving){
-    	x = e.offsetX;
-    	y = e.offsetY;
-	point.style.left = x;
-	point.style.top = y;
-}
+	if(isClicked){
+		if(isMoving){
+    			x = e.offsetX;
+    			y = e.offsetY;
+			point.style.left = x;
+			point.style.top = y;
+		}
+	}
 });
 
 document.addEventListener('mouseup', e => {
 	console.log('mouseup');
-	isMoving = false;
-    x = 0;
-    y = 0;
+	if(isClicked){
+		isMoving = false;
+    		x = 0;
+    		y = 0;
+	}
 });
 	
-	*/
+	
 
 function divclick(){
 	console.log('divclick');
