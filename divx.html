@@ -67,7 +67,7 @@ document.addEventListener('mouseup', e => {
 function divclick(){
 	console.log('divclick');
 	setBorder();
-}
+};
 
 function setBorder(){
 	if(isClicked){
@@ -86,7 +86,7 @@ function setBorder(){
 		point.style.left=myx;
 		point.style.top=myy;
 	}
-}
+};
 	
 function unsetBorder(){
 		isClicked = false;
@@ -95,7 +95,7 @@ function unsetBorder(){
 		var myy = (parseInt(point.style.top,10) + Number(2)) + 'px';
 		point.style.left=myx;
 		point.style.top=myy;	
-}
+};
 </script>
 </head>
 <body onclick="unsetBorder();">
