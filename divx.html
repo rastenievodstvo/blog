@@ -74,21 +74,9 @@ function divclick(){
 function border(){
 	if(isClicked){
 		unsetBorder();
-		/* isClicked = false;
-		point.style.border = 'none';
-		var myx = (parseInt(point.style.left,10) + Number(2)) + 'px';
-		var myy = (parseInt(point.style.top,10) + Number(2)) + 'px';
-		point.style.left=myx;
-		point.style.top=myy; */
 
 	}else{
 		setBorder();
-		/*isClicked = true;
-		point.style.border = '2px solid black';
-		var myx = (parseInt(point.style.left,10) - Number(2)) + 'px';
-		var myy = (parseInt(point.style.top,10) - Number(2)) + 'px';
-		point.style.left=myx;
-		point.style.top=myy;*/
 	}
 };
 	
@@ -120,7 +108,9 @@ function unsetBorder(){
 
 document.addEventListener('dblclick', function (e) {
   console.log('dbclick');
-	document.location.href='https://vk.com/flower_rostov';
+	if(isClicked){
+		document.location.href='https://vk.com/flower_rostov';
+	}
 });
 
 document.addEventListener('keydown', function(){
