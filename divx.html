@@ -44,9 +44,9 @@ document.addEventListener('mousedown', e => {
 		isMoving = true;
   		x = e.offsetX;
   		y = e.offsetY;
-	}else{
+	}/*else{
 		unsetBorder();	
-	}
+	}*/
 });
 
 document.addEventListener('mousemove', e => {
@@ -65,11 +65,11 @@ document.addEventListener('mouseup', e => {
 	console.log('mouseup');
 	if(isClicked){
 		isMoving = false;
-    		/*x = 0;
-    		y = 0;*/
-	}else{
+    		x = 0;
+    		y = 0;
+	}/*else{
 		unsetBorder();	
-	}
+	}*/
 });
 	
 	
