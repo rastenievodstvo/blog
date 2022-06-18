@@ -2,7 +2,7 @@ body {
 	background:gray;
 	text-align:center;
 	width:auto;
-	<!-- height:90%; -->
+	/* height:90%; */
 	margin:auto;
 }
 
@@ -10,9 +10,9 @@ div#blog {
 	background:white;
 	width:800px;
 	height:100%;
-  display: table;
+    display: table;
 	/*position: absolute;*/
-  top: 0;
+    top: 0;
 	margin:auto;
 	max-width: 800px;
 }
@@ -25,4 +25,12 @@ div#point {
 	left:250;
 	background:green;
 	background-image:url(https://sun9-79.userapi.com/s/v1/if2/vZJdr16oNUhlSDCoeKI1iqOK8G143V1Du7BBqli1qzboYrGuHTMFa8cPG8P8Ki2UJD0eJlDhxNFXzfzk9DdeMnea.jpg?size=200x267&quality=96&type=album);
+}
+
+.flower {
+        position:absolute;
+        width:100px;
+        height:100px;
+        background-image:url(https://rastenievodstvo.github.io/blog/derevo.png);
+        background-repeat:norepeat;
 }
