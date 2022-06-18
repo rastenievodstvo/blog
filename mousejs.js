@@ -13,10 +13,11 @@ document.addEventListener('mousemove', e => {
 	console.log('mousemove');
 	if(isClicked){
 		if(isMoving){
-    			x = e.offsetX;
-    			y = e.offsetY;
-			point.style.left = x;
-			point.style.top = y;
+    		x = e.offsetX;
+    		y = e.offsetY;
+            var el = document.getElementsByClassName('flower')[0];
+            el.style.left = x;
+            el.style.top = y;
 		}
 	}
 });
