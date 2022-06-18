@@ -29,3 +29,10 @@ function unsetBorder(){
 		point.style.left=myx;
 		point.style.top=myy;	
 };
+
+document.addEventListener('dblclick', function (e) {
+  console.log('dbclick');
+	if(isClicked){
+		document.location.href='https://vk.com/flower_rostov';
+	}
+});
