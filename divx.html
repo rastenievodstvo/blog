@@ -34,78 +34,14 @@ div#point {
 <script src="scriptclick.js"></script>
 <script src="mousejs.js"></script>
 <script src="myscriptjs.js"></script>
+<script src="key.js"></script>
+<script src="arrow.js"></script>
 <script>
 var isClicked = false;
 let isMoving = false;
 let x = 0;
 let y = 0;
 
-/*
-document.addEventListener('mousedown', e => {
-	console.log('mousedown');
-	if(isClicked){
-		isMoving = true;
-  		x = e.offsetX;
-  		y = e.offsetY;
-	}
-});
-
-document.addEventListener('mousemove', e => {
-	console.log('mousemove');
-	if(isClicked){
-		if(isMoving){
-    			x = e.offsetX;
-    			y = e.offsetY;
-			point.style.left = x;
-			point.style.top = y;
-		}
-	}
-});
-
-document.addEventListener('mouseup', e => {
-	console.log('mouseup');
-	if(isClicked){
-		isMoving = false;
-    		x = 0;
-    		y = 0;
-	}
-});
-*/
-	
-	
-/*
-function divclick(){
-	console.log('divclick');
-	border();
-};
-
-function border(){
-	if(isClicked){
-		unsetBorder();
-
-	}else{
-		setBorder();
-	}
-};
-	
-function setBorder(){
-	isClicked = true;
-	point.style.border = '2px solid black';
-	var myx = (parseInt(point.style.left,10) - Number(2)) + 'px';
-	var myy = (parseInt(point.style.top,10) - Number(2)) + 'px';
-	point.style.left=myx;
-	point.style.top=myy;
-}
-	
-function unsetBorder(){
-	isClicked = false;
-	point.style.border = 'none';
-	var myx = (parseInt(point.style.left,10) + Number(2)) + 'px';
-	var myy = (parseInt(point.style.top,10) + Number(2)) + 'px';
-	point.style.left=myx;
-	point.style.top=myy;	
-};
-*/
 </script>
 </head>
 <body>
@@ -115,100 +51,5 @@ function unsetBorder(){
 </body>
 <script>
 
-document.addEventListener('dblclick', function (e) {
-  console.log('dbclick');
-	if(isClicked){
-		document.location.href='https://vk.com/flower_rostov';
-	}
-});
-/*
-document.addEventListener('keydown', function(){
-    console.log('Success onkeydown');
-	
-});
-
-document.addEventListener('keypress', function(event){
-    console.log('Success onkeypress');
-	console.log('Key: ', event.key);
-    console.log('keyCode: ', event.keyCode);
-    if(event.key == 'ArrowLeft'){
-        console.log('left');
-	myleft();
-    }
-    if(event.key == 'ArrowRight'){
-        console.log('right');
-	myright();
-    }
-    if(event.key == 'ArrowDown'){
-        console.log('down');
-	mydown();
-    }
-    if(event.key == 'ArrowUp'){
-        console.log('up');
-	mytop();
-    }
-});
-
-document.addEventListener('keyup', function(){
-    console.log('Success onkeyup');
-});
-*/
-
-document.addEventListener('keyup', function(event){
-    console.log('Key: ', event.key);
-    console.log('keyCode: ', event.keyCode);
-    if(event.key == 'ArrowLeft'){
-        console.log('left');
-	    if(isClicked){
-		myleft();
-	    }
-    }
-    if(event.key == 'ArrowRight'){
-        console.log('right');
-	    if(isClicked){
-		myright();
-	    }
-    }
-    if(event.key == 'ArrowDown'){
-        console.log('down');
-	    if(isClicked){
-		mydown();
-	    }
-    }
-    if(event.key == 'ArrowUp'){
-        console.log('up');
-	    if(isClicked){
-		mytop();
-	    }
-    }
-});
-
-function myleft(){
-	console.log(Number(point.style.left));
-	//square.style.left = (parseInt(square.style.left,10)+50)+'px';
-	var x = (parseInt(point.style.left,10) - Number(10)) + 'px';
-	//alert(x);
-	point.style.left=x;
-}
-
-function myright(){
-	console.log(Number(point.style.left));
-	//square.style.left = (parseInt(square.style.left,10)+50)+'px';
-	var x = (parseInt(point.style.left,10) + Number(10)) + 'px';
-	//alert(x);
-	point.style.left=x;
-}	
-
-function mytop(){
-	console.log(Number(point.style.top));
-	var y = (parseInt(point.style.top,10) - Number(10)) + 'px';
-	point.style.top=y;
-}
-
-function mydown(){
-	console.log(Number(point.style.top));
-	var y = (parseInt(point.style.top,10) + Number(10)) + 'px';
-	point.style.top=y;
-}
 </script>
 </html>
