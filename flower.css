@@ -1,0 +1,28 @@
+body {
+	background:gray;
+	text-align:center;
+	width:auto;
+	<!-- height:90%; -->
+	margin:auto;
+}
+
+div#blog {
+	background:white;
+	width:800px;
+	height:100%;
+  display: table;
+	/*position: absolute;*/
+  top: 0;
+	margin:auto;
+	max-width: 800px;
+}
+
+div#point {
+	width:185;
+	height:127;
+	position:absolute;
+	top:150;
+	left:250;
+	background:green;
+	background-image:url(https://sun9-79.userapi.com/s/v1/if2/vZJdr16oNUhlSDCoeKI1iqOK8G143V1Du7BBqli1qzboYrGuHTMFa8cPG8P8Ki2UJD0eJlDhxNFXzfzk9DdeMnea.jpg?size=200x267&quality=96&type=album);
+}
