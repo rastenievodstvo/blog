@@ -6,12 +6,12 @@
 <script>
 function SavePhoto(e) 
 {
-    let user = { name:'john', age:34 };
+
     let xhr = new XMLHttpRequest();
     let formData = new FormData();
     let photo = e.files[0];      
     
-    formData.append("user", JSON.stringify(user));   
+    
     formData.append("photo", photo);
     
     xhr.onreadystatechange = state => { console.log(xhr.status); } // err handling
