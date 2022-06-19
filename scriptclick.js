@@ -195,4 +195,8 @@ document.addEventListener('dblclick', function (e) {
 	if(isClicked){
 		document.location.href='https://vk.com/flower_rostov';
 	}
+	
+	if(isBegoniyaClicked){
+		document.location.href='https://vk.com/flower_rostov?owner_id=-115069489&post_id=52297&w=product-198582766_120865117_8e3eb377fc5497b8d4';	
+	}
 });
