@@ -7,7 +7,7 @@ var isFlowerClicked = false;
 
 function logoclick(){
 	console.log('logoclick');	
-	logoborder();
+	logoBorder();
 }
 
 function divclick(){
@@ -119,9 +119,10 @@ function rastenieborder(){
 	el.style.border = '2px solid black';
 }
 
-function logoborder(){
-	var el = document.getElementsByClassName('logo')[0];	
-	el.style.border = '2px boslid black';
+function logoBorder(){
+	border();
+	//var el = document.getElementsByClassName('logo')[0];	
+	//el.style.border = '2px boslid black';
 }
 
 function flowerborder(){
