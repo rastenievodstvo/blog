@@ -4,6 +4,7 @@ var isSecondTreeClicked = false;
 var isLogoClicked = false;
 var isRastenieClicked = false;
 var isFlowerClicked = false;
+var isBegoniyaClicked = false;
 
 function logoclick(){
 	console.log('logoclick');	
