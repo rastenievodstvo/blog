@@ -3,12 +3,17 @@ function divclick(){
 	border();
 };
 
+function treeclick(){
+	console.log('treeclick');	
+}
+
 function flowerclick(){
     console.log('flowerclick');
     //myfunction();
     //border();
     flowerborder();
 }
+
 
 function flowerborder(){
         var el = document.getElementsByClassName('flower')[1];
