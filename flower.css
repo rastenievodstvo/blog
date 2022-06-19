@@ -34,3 +34,27 @@ div#point {
         background-image:url(https://rastenievodstvo.github.io/blog/derevo.png);
         background-repeat:norepeat;
 }
+
+.tree {
+	position:absolute;
+	width:100px;
+	height:100px;
+	background-image:url(https://rastenievodstvo.github.io/blog/derevo.png);
+	background-repeat:norepeat;
+}
+
+.begoniya {
+	position:absolute;
+	width:100px;
+	height:100px;
+	background-image:url(https://rastenievodstvo.github.io/blog/derevo.png);
+	background-repeat:norepeat;
+}
+
+.rastenie {
+	position:absolute;
+	width:100px;
+	height:100px;
+	background-image:url(https://rastenievodstvo.github.io/blog/derevo.png);
+	background-repeat:norepeat;
+}
