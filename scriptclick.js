@@ -90,7 +90,7 @@ function secondTreeBorder(){
 }
 
 function secondTreeSetBorder(){
-		isSecondTreeClicked = true;
+	isSecondTreeClicked = true;
     var el = document.getElementsByClassName('tree')[1];
     el.style.border = '2px solid black';
     var myx = (parseInt(el.style.left,10) - Number(2)) + 'px';
@@ -107,6 +107,35 @@ function secondTreeUnsetBorder(){
     var myy = (parseInt(el.style.top,10) + Number(2)) + 'px';
     el.style.left=myx;
     el.style.top=myy;	
+}
+
+function begoniyaBorder(){
+	console.log('begoniyaBorder');
+	if(isBegoniyaClicked){
+		begoniyaUnsetBorder();	
+	}else{
+		begoniyaSetBorder();	
+	}
+}
+
+function begoniyaSetBorder(){
+	isBegoniyaClicked = true;
+    var el = document.getElementsByClassName('begoniya')[0];
+    el.style.border = '2px solid black';
+    var myx = (parseInt(el.style.left,10) - Number(2)) + 'px';
+    var myy = (parseInt(el.style.top,10) - Number(2)) + 'px';
+    el.style.left=myx;
+    el.style.top=myy;	
+}
+
+function begoniyaUnsetBorder(){
+	isBegoniyaClicked = false;
+    var el = document.getElementsByClassName('begoniya')[0];
+    el.style.border = 'none';
+    var myx = (parseInt(el.style.left,10) + Number(2)) + 'px';
+    var myy = (parseInt(el.style.top,10) + Number(2)) + 'px';
+    el.style.left=myx;
+    el.style.top=myy;
 }
 
 function treeborder(){
