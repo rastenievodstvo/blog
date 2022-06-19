@@ -69,7 +69,7 @@ function firstTreeSetBorder(){
 }
 
 function firstTreeUnsetBorder(){
-	isClicked = false;
+	isFirstTreeClicked = false;
     var el = document.getElementsByClassName('tree')[0];
     el.style.border = 'none';
     var myx = (parseInt(el.style.left,10) + Number(2)) + 'px';
