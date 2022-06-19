@@ -1,10 +1,43 @@
+var isTreeClicked = false;
+var isFirstTreeClicked = false;
+var isSecondTreeClicked = false;
+var isLogoClicked = false;
+var isRastenieClicked = false;
+var isFlowerClicked = false;
+
+function logoclick(){
+	console.log('logoclick');	
+	logoborder();
+}
+
 function divclick(){
 	console.log('divclick');
 	border();
 };
 
+function begoniyaClick(){
+	console.log('begoniyaclick');
+	begoniyaBorder();
+}
+
+function rastenieclick(){
+	console.log('rastenieclick');
+	rastenieborder();
+}
+
 function treeclick(){
-	console.log('treeclick');	
+	console.log('treeclick');
+	treeborder();
+}
+
+function firstTreeClick(){
+	console.log('firstTreeClick');
+	firstTreeBorder();
+}
+
+function secondTreeClick(){
+	console.log('secondTreeClick');
+	secondTreeBorder();
 }
 
 function flowerclick(){
@@ -14,11 +47,86 @@ function flowerclick(){
     flowerborder();
 }
 
+function firstTreeBorder(){
+	console.log('firstTreeBorder');
+	if(isFirstTreeClicked){
+		firstTreeUnsetBorder();
+	}else{
+		firstTreeSetBorder();
+	}
+	//var el = document.getElementsByClassName('tree')[0];
+	//el.style.border = '2px solid black';
+}
+
+function firstTreeSetBorder(){
+	isFirstTreeClicked = true;
+    var el = document.getElementsByClassName('tree')[0];
+    el.style.border = '2px solid black';
+    var myx = (parseInt(el.style.left,10) - Number(2)) + 'px';
+    var myy = (parseInt(el.style.top,10) - Number(2)) + 'px';
+    el.style.left=myx;
+    el.style.top=myy;	
+}
+
+function firstTreeUnsetBorder(){
+	isClicked = false;
+    var el = document.getElementsByClassName('tree')[0];
+    el.style.border = 'none';
+    var myx = (parseInt(el.style.left,10) + Number(2)) + 'px';
+    var myy = (parseInt(el.style.top,10) + Number(2)) + 'px';
+    el.style.left=myx;
+    el.style.top=myy;	
+}
+
+function secondTreeBorder(){
+	console.log('secondTreeBorder');
+	if(isSecondTreeClicked){
+		secondTreeUnsetBorder();	
+	}else{
+		secondTreeSetBorder()
+	}
+	//var el = document.getElementsByClassName('secondTreeBorder')[0];
+	//el.style.border = '2px solid black';
+}
+
+function secondTreeSetBorder(){
+		isSecondTreeClicked = true;
+    var el = document.getElementsByClassName('tree')[1];
+    el.style.border = '2px solid black';
+    var myx = (parseInt(el.style.left,10) - Number(2)) + 'px';
+    var myy = (parseInt(el.style.top,10) - Number(2)) + 'px';
+    el.style.left=myx;
+    el.style.top=myy;		
+}
+
+function secondTreeUnsetBorder(){
+	isSecondTreeClicked = false;
+    var el = document.getElementsByClassName('tree')[1];
+    el.style.border = 'none';
+    var myx = (parseInt(el.style.left,10) + Number(2)) + 'px';
+    var myy = (parseInt(el.style.top,10) + Number(2)) + 'px';
+    el.style.left=myx;
+    el.style.top=myy;	
+}
+
+function treeborder(){
+	var el = document.getElementsByClassName('tree')[0];
+	el.style.border = '2px solid green';
+}
+
+function rastenieborder(){
+	var el = document.getElementsByClassName('rastenie')[0];
+	el.style.border = '2px solid black';
+}
+
+function logoborder(){
+	var el = document.getElementsByClassName('logo')[0];	
+	el.style.border = '2px boslid black';
+}
 
 function flowerborder(){
         var el = document.getElementsByClassName('flower')[1];
         el.style.border = '2px solid black';
-        //this.style.border = '2px solid black';
 }
 
 function border(){
