@@ -3,27 +3,45 @@ document.addEventListener('keyup', function(event){
     console.log('keyCode: ', event.keyCode);
     if(event.key == 'ArrowLeft'){
         console.log('left');
-	    if(isClicked){
+	    if(isLogoClicked){
 		myleft();
 	    }
     }
     if(event.key == 'ArrowRight'){
         console.log('right');
-	    if(isClicked){
+	    if(isLogoClicked){
 		myright();
 	    }
     }
     if(event.key == 'ArrowDown'){
         console.log('down');
-	    if(isClicked){
+	    if(isLogoClicked){
 		mydown();
 	    }
     }
     if(event.key == 'ArrowUp'){
         console.log('up');
-	    if(isClicked){
+	    if(isLogoClicked){
 		mytop();
 	    }
+    }
+    if((event.key == 'c') || (event.key == 'с')){
+            console.log('c');
+            if(isLogoClicked){
+                    unsetLogoBorder();
+            }
+            
+            if(isBegoniyaClicked){
+                    begoniyaUnsetBorder();
+            }
+            
+            if(isFirstTreeClicked){
+                    firstTreeUnsetBorder();
+            }
+            
+            if(isSecondTreeClicked){
+                    secondTreeUnsetBorder();
+            }
     }
 });
 
