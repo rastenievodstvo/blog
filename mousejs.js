@@ -1,6 +1,6 @@
 document.addEventListener('mousedown', e => {
 	console.log('mousedown');
-	if(isClicked){
+	if(isLogoClicked){
 		isMoving = true;
   		x = e.offsetX;
   		y = e.offsetY;
@@ -11,7 +11,7 @@ document.addEventListener('mousedown', e => {
 
 document.addEventListener('mousemove', e => {
 	console.log('mousemove');
-	if(isClicked){
+	if(isLogoClicked){
 		if(isMoving){
     		x = e.offsetX;
     		y = e.offsetY;
@@ -24,11 +24,12 @@ document.addEventListener('mousemove', e => {
 
 document.addEventListener('mouseup', e => {
 	console.log('mouseup');
-	if(isClicked){
+	if(isLogoClicked){
 		isMoving = false;
-    		x = 0;
-    		y = 0;
+  		x = e.offsetX;
+  		y = e.offsetY;
 	}/*else{
 		unsetBorder();	
 	}*/
 });
+
