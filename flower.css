@@ -10,9 +10,9 @@ div#blog {
 	background:white;
 	width:800px;
 	height:100%;
-    display: table;
+    	display: table;
 	/*position: absolute;*/
-    top: 0;
+    	top: 0;
 	margin:auto;
 	max-width: 800px;
 }
