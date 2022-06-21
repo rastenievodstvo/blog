@@ -45,10 +45,12 @@ document.addEventListener('keyup', function(event){
     }
     if(event.key == 'm'){
             console.log('m');
+            alert("menu");
             
     }
     if(event.key == 'i'){
             console.log('i - info');
+            alert("info");
     }
 });
 
