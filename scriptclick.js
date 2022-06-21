@@ -51,7 +51,7 @@ function flowerclick(){
 }
 
 function fikusClick(){
-	console.log('fikusclick);
+	console.log('fikusclick');
 	fikusBorder();
 }
 
