@@ -225,4 +225,12 @@ document.addEventListener('dblclick', function (e) {
 	if(isBegoniyaClicked){
 		document.location.href='https://vk.com/flower_rostov?owner_id=-115069489&post_id=52297&w=product-198582766_120865117_8e3eb377fc5497b8d4';	
 	}
+	
+	if(isFirstTreeClicked){
+            document.location.href='https://azbyka.ru/duxovnost';
+    }
+    
+    if(isSecondTreeClicked){
+            document.location.href='https://vk.com/kinovrostove';
+    }
 });
