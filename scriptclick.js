@@ -254,7 +254,7 @@ function unsetBorderAll(){
             }
 	
 	if(isFikusClicked){
-		fikusBorder();	
+		unsetFikusBorder();	
 	}
 }
 
