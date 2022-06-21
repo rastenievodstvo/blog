@@ -1,3 +1,4 @@
+/*
 let isMoving = false;
 //let x = 0;
 //let y = 0;
@@ -40,3 +41,4 @@ document.addEventListener('mouseup', e => {
   		//y = e.offsetY;
 	}
 });
+*/
