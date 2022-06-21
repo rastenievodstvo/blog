@@ -13,7 +13,7 @@ function logoclick(){
 
 function divclick(){
 	console.log('divclick');
-	border();
+	//border();
 };
 
 function begoniyaClick(){
@@ -51,12 +51,10 @@ function flowerclick(){
 function firstTreeBorder(){
 	console.log('firstTreeBorder');
 	if(isFirstTreeClicked){
-		firstTreeUnsetBorder();
+		//firstTreeUnsetBorder();
 	}else{
 		firstTreeSetBorder();
 	}
-	//var el = document.getElementsByClassName('tree')[0];
-	//el.style.border = '2px solid black';
 }
 
 function firstTreeSetBorder(){
@@ -82,12 +80,10 @@ function firstTreeUnsetBorder(){
 function secondTreeBorder(){
 	console.log('secondTreeBorder');
 	if(isSecondTreeClicked){
-		secondTreeUnsetBorder();	
+		//secondTreeUnsetBorder();	
 	}else{
 		secondTreeSetBorder()
 	}
-	//var el = document.getElementsByClassName('secondTreeBorder')[0];
-	//el.style.border = '2px solid black';
 }
 
 function secondTreeSetBorder(){
@@ -113,7 +109,7 @@ function secondTreeUnsetBorder(){
 function begoniyaBorder(){
 	console.log('begoniyaBorder');
 	if(isBegoniyaClicked){
-		begoniyaUnsetBorder();	
+		//begoniyaUnsetBorder();	
 	}else{
 		begoniyaSetBorder();	
 	}
@@ -150,28 +146,20 @@ function rastenieborder(){
 }
 
 function logoBorder(){
-	border();
-	//var el = document.getElementsByClassName('logo')[0];	
-	//el.style.border = '2px boslid black';
+    if(isLogoClicked){
+		//unsetLogoBorder();
+	}else{
+		setLogoBorder();
+	}
 }
 
 function flowerborder(){
         var el = document.getElementsByClassName('flower')[1];
         el.style.border = '2px solid black';
 }
-
-function border(){
-	if(isClicked){
-		unsetBorder();
-	}else{
-		setBorder();
-	}
-};
-
-
 	
-function setBorder(){
-	isClicked = true;
+function setLogoBorder(){
+	isLogoClicked = true;
     var el = document.getElementsByClassName('flower')[0];
     el.style.border = '2px solid black';
     var myx = (parseInt(el.style.left,10) - Number(2)) + 'px';
@@ -180,8 +168,8 @@ function setBorder(){
     el.style.top=myy;
 }
 	
-function unsetBorder(){
-	isClicked = false;
+function unsetLogoBorder(){
+	isLogoClicked = false;
     var el = document.getElementsByClassName('flower')[0];
     el.style.border = 'none';
     var myx = (parseInt(el.style.left,10) + Number(2)) + 'px';
@@ -190,9 +178,18 @@ function unsetBorder(){
     el.style.top=myy;
 };
 
+function unsetBorderAll(){
+        console.log('unsetBorderAll');
+        
+        if(isBegoniyaClicked){
+                begoniyaUnsetBorder();
+        }
+}
+
+
 document.addEventListener('dblclick', function (e) {
   console.log('dbclick');
-	if(isClicked){
+	if(isLogoClicked){
 		document.location.href='https://vk.com/flower_rostov';
 	}
 	
