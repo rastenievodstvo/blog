@@ -51,7 +51,7 @@ function flowerclick(){
 }
 
 function fikusClick(){
-	console.log('fikusclick');
+	console.log('fikusClick');
 	fikusBorder();
 }
 
@@ -140,7 +140,7 @@ function begoniyaBorder(){
 }
 
 function fikusSetBorder(){
-	if(isFikusClicked){
+	if(!isFikusClicked){
 		unsetBorderAll();	
 	}
 	isClicked = true;
@@ -216,7 +216,7 @@ function setLogoBorder(){
     }
     isClicked = true;
 	isLogoClicked = true;
-    var el = document.getElementsByClassName('flower')[0];
+    var el = document.getElementsByClassName('logo')[0];
     el.style.border = '2px solid black';
     var myx = (parseInt(el.style.left,10) - Number(2)) + 'px';
     var myy = (parseInt(el.style.top,10) - Number(2)) + 'px';
@@ -226,7 +226,7 @@ function setLogoBorder(){
 	
 function unsetLogoBorder(){
 	isLogoClicked = false;
-    var el = document.getElementsByClassName('flower')[0];
+    var el = document.getElementsByClassName('logo')[0];
     el.style.border = 'none';
     var myx = (parseInt(el.style.left,10) + Number(2)) + 'px';
     var myy = (parseInt(el.style.top,10) + Number(2)) + 'px';
