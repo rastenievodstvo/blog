@@ -1,3 +1,7 @@
+let isMoving = false;
+let x = 0;
+let y = 0;
+
 document.addEventListener('mousedown', e => {
 	console.log('mousedown');
 	if(isLogoClicked){
@@ -32,4 +36,3 @@ document.addEventListener('mouseup', e => {
 		unsetBorder();	
 	}*/
 });
-
