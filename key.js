@@ -27,21 +27,7 @@ document.addEventListener('keyup', function(event){
     }
     if((event.key == 'c') || (event.key == 'с')){
             console.log('c');
-            if(isLogoClicked){
-                    unsetLogoBorder();
-            }
-            
-            if(isBegoniyaClicked){
-                    begoniyaUnsetBorder();
-            }
-            
-            if(isFirstTreeClicked){
-                    firstTreeUnsetBorder();
-            }
-            
-            if(isSecondTreeClicked){
-                    secondTreeUnsetBorder();
-            }
+            unsetBorderAll()
     }
     if(event.key == 'm'){
             console.log('m');
