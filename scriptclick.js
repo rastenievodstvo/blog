@@ -6,6 +6,7 @@ var isLogoClicked = false;
 var isRastenieClicked = false;
 var isFlowerClicked = false;
 var isBegoniyaClicked = false;
+var isFikusClicked = false;
 
 function divclick(){
 	console.log('divclick');
@@ -47,6 +48,11 @@ function flowerclick(){
     //myfunction();
     //border();
     flowerborder();
+}
+
+function fikusClick(){
+	console.log('fikusclick);
+	fikusborder();
 }
 
 function firstTreeBorder(){
@@ -115,6 +121,15 @@ function secondTreeUnsetBorder(){
     el.style.top=myy;	
 }
 
+function fikusBorder(){
+	console.log('fikusBorder');
+	if(isFikusClicked){
+		//
+	}else{
+		fikusSetBorder();	
+	}
+}
+
 function begoniyaBorder(){
 	console.log('begoniyaBorder');
 	if(isBegoniyaClicked){
@@ -122,6 +137,30 @@ function begoniyaBorder(){
 	}else{
 		begoniyaSetBorder();	
 	}
+}
+
+function fikusSetBorder(){
+	if(isFikusClicked){
+		unsetBorderAll();	
+	}
+	isClicked = true;
+	isFikusClicked = true;
+	var el = document.getElementsByClassName('fikus')[0];
+    el.style.border = '2px solid black';
+    var myx = (parseInt(el.style.left,10) - Number(2)) + 'px';
+    var myy = (parseInt(el.style.top,10) - Number(2)) + 'px';
+    el.style.left=myx;
+    el.style.top=myy;	
+}
+
+function unsetFikusBorder(){
+	isFikusClicked = false;
+    var el = document.getElementsByClassName('fikus')[0];
+    el.style.border = 'none';
+    var myx = (parseInt(el.style.left,10) + Number(2)) + 'px';
+    var myy = (parseInt(el.style.top,10) + Number(2)) + 'px';
+    el.style.left=myx;
+    el.style.top=myy;	
 }
 
 function begoniyaSetBorder(){
@@ -213,6 +252,10 @@ function unsetBorderAll(){
             if(isSecondTreeClicked){
                     secondTreeUnsetBorder();
             }
+	
+	if(isFikusClicked){
+		fikusBorder();	
+	}
 }
 
 
@@ -228,9 +271,13 @@ document.addEventListener('dblclick', function (e) {
 	
 	if(isFirstTreeClicked){
             document.location.href='https://azbyka.ru/duxovnost';
-    }
+    	}
     
-    if(isSecondTreeClicked){
-            document.location.href='https://vk.com/kinovrostove';
-    }
+	if(isSecondTreeClicked){
+		document.location.href='https://vk.com/kinovrostove';
+	}
+	
+	if(isFikusClicked){
+		document.location.href='https://vk.com/flower_rostov?owner_id=-115069489&post_id=52297&w=wall-115069489_52333';	
+	}
 });
