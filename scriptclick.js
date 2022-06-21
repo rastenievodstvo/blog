@@ -52,7 +52,7 @@ function flowerclick(){
 
 function fikusClick(){
 	console.log('fikusclick);
-	fikusborder();
+	fikusBorder();
 }
 
 function firstTreeBorder(){
