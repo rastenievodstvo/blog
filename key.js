@@ -4,25 +4,25 @@ document.addEventListener('keyup', function(event){
     if(event.key == 'ArrowLeft'){
         console.log('left');
 	    if(isLogoClicked){
-		myleft();
+            myleft();
 	    }
     }
     if(event.key == 'ArrowRight'){
         console.log('right');
 	    if(isLogoClicked){
-		myright();
+            myright();
 	    }
     }
     if(event.key == 'ArrowDown'){
         console.log('down');
 	    if(isLogoClicked){
-		mydown();
+            mydown();
 	    }
     }
     if(event.key == 'ArrowUp'){
         console.log('up');
 	    if(isLogoClicked){
-		mytop();
+            mytop();
 	    }
     }
     if((event.key == 'c') || (event.key == 'с')){
@@ -42,6 +42,13 @@ document.addEventListener('keyup', function(event){
             if(isSecondTreeClicked){
                     secondTreeUnsetBorder();
             }
+    }
+    if(event.key == 'm'){
+            console.log('m');
+            
+    }
+    if(event.key == 'i'){
+            console.log('i - info');
     }
 });
 
