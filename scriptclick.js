@@ -1,3 +1,4 @@
+var isClicked = false;
 var isTreeClicked = false;
 var isFirstTreeClicked = false;
 var isSecondTreeClicked = false;
@@ -6,19 +7,9 @@ var isRastenieClicked = false;
 var isFlowerClicked = false;
 var isBegoniyaClicked = false;
 
-function logoclick(){
-	console.log('logoclick');	
-	logoBorder();
-}
-
 function divclick(){
 	console.log('divclick');
 	//border();
-};
-
-function begoniyaClick(){
-	console.log('begoniyaclick');
-	begoniyaBorder();
 }
 
 function rastenieclick(){
@@ -29,6 +20,16 @@ function rastenieclick(){
 function treeclick(){
 	console.log('treeclick');
 	treeborder();
+}
+
+function logoclick(){
+	console.log('logoclick');	
+	logoBorder();
+}
+
+function begoniyaClick(){
+	console.log('begoniyaclick');
+	begoniyaBorder();
 }
 
 function firstTreeClick(){
@@ -58,6 +59,10 @@ function firstTreeBorder(){
 }
 
 function firstTreeSetBorder(){
+    if(isClicked){
+            unsetBorderAll();
+    }
+    isClicked = true;
 	isFirstTreeClicked = true;
     var el = document.getElementsByClassName('tree')[0];
     el.style.border = '2px solid black';
@@ -87,6 +92,10 @@ function secondTreeBorder(){
 }
 
 function secondTreeSetBorder(){
+    if(isClicked){
+            unsetBorderAll();
+    }
+    isClicked = true;
 	isSecondTreeClicked = true;
     var el = document.getElementsByClassName('tree')[1];
     el.style.border = '2px solid black';
@@ -116,6 +125,10 @@ function begoniyaBorder(){
 }
 
 function begoniyaSetBorder(){
+    if(isClicked){
+            unsetBorderAll();
+    }
+    isClicked = true;
 	isBegoniyaClicked = true;
     var el = document.getElementsByClassName('begoniya')[0];
     el.style.border = '2px solid black';
@@ -159,6 +172,10 @@ function flowerborder(){
 }
 	
 function setLogoBorder(){
+    if(isClicked){
+            unsetBorderAll();
+    }
+    isClicked = true;
 	isLogoClicked = true;
     var el = document.getElementsByClassName('flower')[0];
     el.style.border = '2px solid black';
@@ -181,9 +198,21 @@ function unsetLogoBorder(){
 function unsetBorderAll(){
         console.log('unsetBorderAll');
         
-        if(isBegoniyaClicked){
-                begoniyaUnsetBorder();
-        }
+            if(isLogoClicked){
+                    unsetLogoBorder();
+            }
+            
+            if(isBegoniyaClicked){
+                    begoniyaUnsetBorder();
+            }
+            
+            if(isFirstTreeClicked){
+                    firstTreeUnsetBorder();
+            }
+            
+            if(isSecondTreeClicked){
+                    secondTreeUnsetBorder();
+            }
 }
 
 
