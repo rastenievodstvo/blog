@@ -45,9 +45,10 @@ document.addEventListener('keydown', function(){
     console.log('Success onkeydown');
 	
 });
+*/
 document.addEventListener('keypress', function(event){
     console.log('Success onkeypress');
-	console.log('Key: ', event.key);
+    console.log('Key: ', event.key);
     console.log('keyCode: ', event.keyCode);
     if(event.key == 'ArrowLeft'){
         console.log('left');
@@ -66,6 +67,8 @@ document.addEventListener('keypress', function(event){
 	mytop();
     }
 });
+
+/*
 document.addEventListener('keyup', function(){
     console.log('Success onkeyup');
 });
